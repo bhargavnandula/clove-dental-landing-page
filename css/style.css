@@ -1,0 +1,1008 @@
+/* ------------------------
+GLOBAL
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #222;
+    background: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+:root {
+    --primary: #0066ff;
+    --dark: #111;
+    --light: #555;
+}
+
+/* ------------------------
+HEADER
+------------------------- */
+.header {
+    width: 100%;
+    padding: 20px 0;
+    background: #F5F5F0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #C97D4A;
+}
+
+.logo-emoji {
+    color: #3D2817;
+}
+
+.logo-dental {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D2817;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-appointment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #C97D4A;
+    border: none;
+    border-radius: 8px;
+    color: #F5F5F0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-appointment:hover {
+    background: #B86A3A;
+}
+
+.btn-appointment .icon {
+    color: #3D2817;
+    stroke: #3D2817;
+}
+
+.phone-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #FFFFFF;
+    border: 1.5px solid #3D2817;
+    border-radius: 8px;
+}
+
+.phone-display .icon {
+    color: #3D2817;
+    stroke: #3D2817;
+}
+
+.phone-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D2817;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+/* Mobile Hamburger */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: #222;
+    transition: 0.3s;
+}
+
+/* ------------------------
+HERO
+------------------------- */
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #E8E8E0 0%, #F5F5F0 100%);
+    background-image: url('../images/dental-clinic-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: 1;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+}
+
+.hero-title {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.btn-hero-appointment {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #FF8C42;
+    border: 2px solid #FFB366;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-hero-appointment:hover {
+    background: #FF7A2E;
+    border-color: #FF8C42;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+}
+
+.btn-hero-appointment .icon {
+    color: #FFFFFF;
+    stroke: #FFFFFF;
+}
+
+.btn-primary {
+    padding: 14px 35px;
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ------------------------
+STATISTICS
+------------------------- */
+.statistics {
+    padding: 60px 0;
+    background: #F5F5F0;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 120px;
+}
+
+.stat-icon {
+    color: #3D2817;
+    font-size: 40px;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #C97D4A;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D2817;
+    text-align: center;
+}
+
+/* ------------------------
+ROOT CANAL TREATMENTS INTRO
+------------------------- */
+.rct-intro {
+    padding: 80px 0;
+    background: #000000;
+}
+
+.rct-intro-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rct-intro-text {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ------------------------
+ROOT CANAL TREATMENT CARDS
+------------------------- */
+.rct-cards-section {
+    padding: 80px 0;
+    background: #000000;
+}
+
+.rct-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+}
+
+.rct-card {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rct-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.rct-card-image {
+    width: 50%;
+    background: #F5F5F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.rct-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rct-card-content {
+    width: 50%;
+    background: #000000;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rct-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #E0E0E0;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.rct-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.rct-services-list li {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.rct-services-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #C97D4A;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.rct-pricing {
+    margin-bottom: 25px;
+}
+
+.rct-price-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #C97D4A;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.rct-price-amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: #E0E0E0;
+    display: block;
+}
+
+.btn-rct-consultation {
+    padding: 14px 35px;
+    background: #C97D4A;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-rct-consultation:hover {
+    background: #B86A3A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 125, 74, 0.4);
+}
+
+/* ------------------------
+SECTIONS TITLES
+------------------------- */
+.section-title {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--light);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ------------------------
+WHY CHOOSE CLOVE DENTAL
+------------------------- */
+.why-choose {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.why-choose-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.why-choose-content {
+    flex: 1;
+    color: #3D2817;
+}
+
+.why-choose-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #3D2817;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.why-choose-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.why-choose-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-choose-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    color: #3D2817;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.why-choose-icon {
+    color: #C97D4A;
+    font-size: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.why-choose-list li span {
+    flex: 1;
+}
+
+.why-choose-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-choose-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* ------------------------
+ABOUT
+------------------------- */
+.about {
+    padding: 100px 0;
+}
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    padding: 12px 28px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ------------------------
+TESTIMONIALS
+------------------------- */
+.testimonials {
+    padding: 100px 0;
+    background: #f5f7ff;
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonial-card {
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    font-size: 15px;
+}
+
+/* ------------------------
+PRICING
+------------------------- */
+.pricing {
+    padding: 100px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.price-card {
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+    background: #fff;
+}
+
+.price-card.active {
+    border: 2px solid var(--primary);
+    transform: translateY(-10px);
+}
+
+.price {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.price-card li {
+    margin-bottom: 10px;
+}
+
+/* ------------------------
+FOOTER
+------------------------- */
+.footer {
+    padding: 60px 0 40px 0;
+    background: #3D2817;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.footer-logo-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #C97D4A;
+}
+
+.footer-logo-emoji {
+    color: #FFFFFF;
+}
+
+.footer-logo-dental {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #C97D4A;
+}
+
+.footer-separator {
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 30px 0;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* ------------------------
+RESPONSIVE
+------------------------- */
+@media (max-width: 900px) {
+    .hero {
+        min-height: 500px;
+        padding: 60px 0;
+    }
+
+    .hero-overlay {
+        max-width: 100%;
+        padding: 40px 30px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .statistics-container {
+        gap: 25px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .rct-intro {
+        padding: 60px 0;
+    }
+
+    .rct-intro-title {
+        font-size: 28px;
+    }
+
+    .rct-intro-text {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .rct-cards-section {
+        padding: 60px 0;
+    }
+
+    .rct-cards-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rct-card {
+        flex-direction: column;
+    }
+
+    .rct-card-image {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .rct-card-content {
+        width: 100%;
+        padding: 30px 25px;
+    }
+
+    .rct-card-title {
+        font-size: 18px;
+    }
+
+    .hero-container,
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-choose-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .why-choose-title {
+        font-size: 32px;
+    }
+
+    .why-choose-subtitle {
+        font-size: 16px;
+    }
+
+    .why-choose-list li {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-appointment,
+    .phone-display {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        right: 20px;
+        top: 80px;
+        padding: 25px;
+        width: 200px;
+        border-radius: 10px;
+        gap: 20px;
+        border: 1px solid #eee;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .statistics {
+        padding: 40px 0;
+    }
+
+    .statistics-container {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .stat-item {
+        min-width: 90px;
+    }
+
+    .stat-icon {
+        font-size: 32px;
+    }
+
+    .stat-number {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .rct-intro {
+        padding: 40px 0;
+    }
+
+    .rct-intro-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .rct-intro-text {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .rct-cards-section {
+        padding: 40px 0;
+    }
+
+    .rct-cards-container {
+        gap: 20px;
+    }
+
+    .rct-card-content {
+        padding: 25px 20px;
+    }
+
+    .rct-card-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .rct-services-list li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .rct-price-label {
+        font-size: 14px;
+    }
+
+    .rct-price-amount {
+        font-size: 24px;
+    }
+
+    .btn-rct-consultation {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    .why-choose {
+        padding: 60px 0;
+    }
+
+    .why-choose-container {
+        gap: 30px;
+    }
+
+    .why-choose-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .why-choose-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .why-choose-list li {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    .why-choose-icon {
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 40px 0 30px 0;
+    }
+
+    .footer-logo-text {
+        font-size: 24px;
+    }
+
+    .footer-logo-dental {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+}
