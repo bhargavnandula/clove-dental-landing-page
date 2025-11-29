@@ -15,6 +15,10 @@ This landing page showcases Clove Dental’s services with pixel-perfect UI, cle
 ## 📸 Screenshots  
 <img width="1024" height="1024" alt="c7ec34a055b9420c62059e1b314c42dee347395a" src="https://github.com/user-attachments/assets/0916abb6-76d3-4ef0-89d7-68ef879aafb3" />
 
+<img width="901" height="1024" alt="0af583fd0409b9803b51b8a9b58ac424f1a201bd" src="https://github.com/user-attachments/assets/0dd8aad3-bd58-4a00-9933-ab0ecdf910a7" />
+
+<img width="1181" height="525" alt="Frame 260934904" src="https://github.com/user-attachments/assets/91e6db8a-7596-41e0-868e-c8172a09dc28" />
+
 
 ---
 
@@ -83,5 +87,6 @@ project/
 - **FontAwesome Icons**  
 - **SVG Icons**  
 - **Figma → Code conversion**
+
 
 
